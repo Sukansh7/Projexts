@@ -12,6 +12,10 @@ body {
     width: 100%;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .crsr {
     height: 2.5vw;
     width: 2.5vw;
@@ -230,4 +234,140 @@ body {
 
 #video-cursor svg {
     width: 20%;
+}
+
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: grey;
+    position: relative;
+}
+
+#page4 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#page4-content {
+    width: 72vw;
+    margin-left: 28%;
+    position: relative;
+}
+
+#page4-content h1 {
+    font-size: 7vw;
+    text-transform: uppercase;
+}
+
+.underline {
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    margin: 5vw 0;
+}
+
+#page4-content>p {
+    font-size: 2.05vw;
+    width: 50%;
+    margin-bottom: 3vw;
+}
+
+#page4-flex {
+    display: flex;
+}
+
+#page4-flex img {
+    width: 48%;
+}
+
+#page4-flex p {
+    font-size: 0.9vw;
+    width: 19%;
+    margin-left: 2vw;
+}
+
+.page4-blue-div {
+    background-color: #3F7DF4;
+    width: 33vw;
+    padding: 4vw 3vw;
+    position: relative;
+    margin-top: -35vh;
+    margin-left: 26vw;
+}
+
+.page4-blue-elem {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2.5vw 0;
+    border-bottom: 2px solid white;
+}
+
+.page4-blue-elem h4 {
+    font-size: 1.4vw;
+    font-weight: 500;
+}
+
+.page4-blue-elem p {
+    width: 40%;
+    font-style: 0.7vw;
+}
+
+#page5 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.elem {
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.elem h1 {
+    font-size: 7vw;
+    -webkit-text-stroke: 1px white;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    animation: horizontalScroller 15s linear infinite;
+}
+
+@keyframes horizontalScroller {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+.elem2 {
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: 1vw;
+}
+
+.elem2 h1 {
+    font-size: 7vw;
+    -webkit-text-stroke: 1px white;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    animation: horizontalScroller 15s linear infinite reverse;
+}
+
+.elem span, .elem2 span {
+    font-style: italic;
+    font-family: 'silk serif';
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    font-weight: 400;
+    text-transform: uppercase;
 }
