@@ -2,21 +2,24 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  let [counter, setCounter] = useState(15);
+  const [counter, setCounter] = useState(15);
 
   function addValue() {
-    counter++;
-    setCounter(counter);
-    if (counter > 20) {
-      setCounter((counter = 20));
-    }
+    setCounter((prevCounter) => {
+      if (prevCounter >= 20) {
+        return 20;
+      }
+      return prevCounter + 1;
+    });
   }
 
   function removeValue() {
-    setCounter(counter - 1);
-    if (counter < 1) {
-      setCounter((counter = 0));
-    }
+    setCounter((prevCounter) => {
+      if (prevCounter <= 0) {
+        return 0;
+      }
+      return prevCounter - 1;
+    });
   }
 
   return (
